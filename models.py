@@ -10,10 +10,10 @@ db = SQLAlchemy()
 #db = MySQL()
 
 class household_account(db.Model):
-	__tablename__ = 'household_account'
+	__tablename__ = 'guests'
 	uid = db.Column('account_id', db.Integer, primary_key=True)
 	account_name = db.Column('account_username', db.String(85))
-	account_password = db.Column('account_password', db.String(85))
+	account_password = db.Column('account_password', db.String(500))
 
 	def __init__(self, account_name, account_password):
 		self.account_name = account_name

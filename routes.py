@@ -4,12 +4,8 @@ from forms import SignupForm, SigninForm, AddressForm
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:%s@localhost:3306/mpc_prod' % "G%21ng3rBr%23%40d"
-#app.config['MYSQL_HOST'] = 'localhost'
-#app.config['MYSQL_PORT'] = '3306'
-#app.config['MYSQL_USER'] = 'root'
-#app.config['MYSQL_PASSWORD'] = 'G!ng3rBr#@d'
-#app.config['MYSQL_DB'] = 'mpc_prod'
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://axaopxfswwlqvx:74f9036b837ed72b1587268d7efe2a890d7c8e94a41198706a7ca31c3e547a44@ec2-54-225-94-143.compute-1.amazonaws.com:5432/d91jp1h8don8iv"
+
 db.init_app(app)
 
 app.secret_key = "testing_this_little_thing_out"
