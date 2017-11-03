@@ -12,8 +12,8 @@ db = SQLAlchemy()
 class household_account(db.Model):
 	__tablename__ = 'guests'
 	uid = db.Column('account_id', db.Integer, primary_key=True)
-	account_name = db.Column('account_username', db.String(85))
-	account_password = db.Column('account_password', db.String(500))
+	account_name = db.Column('account_username', db.VARCHAR(85))
+	account_password = db.Column('account_password', db.VARCHAR(500))
 
 	def __init__(self, account_name, account_password):
 		self.account_name = account_name
