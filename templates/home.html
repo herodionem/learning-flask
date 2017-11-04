@@ -5,7 +5,7 @@
 		<div class="container">
 			<h1>Home</h1>
 		
-			Feel free to log out if you need to:
+			<p>Feel free to log out if you need to:</p>
 			<div>
 				<a href="{{ url_for('logout') }}" class="btn-primary">Log Out</a>
 			</div>
@@ -33,7 +33,7 @@
 								{% endfor %}
 							{% endif %}
 
-							{{ form.address(placeholder="Explore nearby") }}
+							{{ form.address(placeholder="Explore nearby (Please enter valid address)") }}
 						</div>
 						
 						{{ form.submit(class="btn-primary") }}
